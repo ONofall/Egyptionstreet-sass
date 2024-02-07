@@ -8,6 +8,7 @@ $grid-gaps: (
         "3": 30px,
 );
 $layout-values: flex-start, flex-end, center, space-between, space-around;
+$a-layout-values: normal, stretch, center, start, end, flex-start, flex-end, self-start, self-end, baseline, inherit, initial, revert, unset ;
 
 // base layout classes
 .container {
@@ -20,6 +21,9 @@ $layout-values: flex-start, flex-end, center, space-between, space-around;
 .row {
   display: flex;
   flex-flow: row wrap;
+}
+.flex-c{
+  flex-direction: column;
 }
 
 // grid gaps
@@ -37,6 +41,13 @@ $layout-values: flex-start, flex-end, center, space-between, space-around;
 @each $val in $layout-values {
   .justify-#{$val} {
     justify-content: $val;
+  }
+}
+// align items classes
+
+@each $val in $a-layout-values {
+  .align-items-#{$val} {
+    align-items: $val;
   }
 }
 

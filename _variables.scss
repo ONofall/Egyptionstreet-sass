@@ -19,6 +19,8 @@ $colors: (
         "gray": #808080,
         "black": black,
         "white": white,
+        "darkred": #7C261D,
+        "egray" :#F3F3F5
 );
 
 @debug map-get($colors, "purple");
@@ -42,7 +44,7 @@ $base-margin: 0.75rem;
 
 // borders
 $base-border-thickness: 1px;
-$base-border-radius: 20px;
+$base-border-radius: 5px;
 
 // box-shadow
 $base-box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
@@ -53,3 +55,17 @@ $font-size-sm: $base-font-size * 0.75;
 $font-size-lg: $base-font-size * 1.5;
 $font-size-xl: $base-font-size * 2;
 $font-size-xxl: $base-font-size * 3;
+// font weight
+$base-font-weight : 100;
+//width and height
+$base-width : 25%;
+$base-height : 25%;
+
+.cover {
+  background-image: url('/imgs/Rectangle-608.png');
+  background-size: cover; // Adjust as needed
+  background-position: center; // Adjust as needed
+  background-repeat: no-repeat; // Adjust as needed
+  padding: 20px; // Optional: Add padding to the paragraph
+}
+

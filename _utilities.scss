@@ -156,21 +156,50 @@ $utilities: (
                         "xl": $font-size-xl,
                         "xxl": $font-size-xxl
                 )
+        ),
+        "font-weight":(
+                "prefix" :"fw",
+                "values":(
+                        "1": $base-font-weight,
+                        "2": $base-font-weight * 4,
+                        "3": $base-font-weight * 5,
+                        "4": $base-font-weight * 6,
+                        "5": $base-font-weight * 7
+                ),
+        ),
+        "width":(
+                "prefix" :"w",
+                "values":(
+                        "0": $base-width * 0 ,
+                        "25": $base-width ,
+                        "50": $base-width * 2,
+                        "75": $base-width * 3,
+                        "100": $base-width * 4
+                ),
+        ),
+        "height":(
+                "prefix" :"h",
+                "values":(
+                        "0": $base-height * 0 ,
+                        "25": $base-height ,
+                        "50": $base-height * 2,
+                        "75": $base-height * 3,
+                        "100": $base-height * 4
+                ),
         )
 );
 //generate utility classes
-@each $property,$map in $utilities {
-  $prefix: map-get($map , "prefix");
-  $values: map-get($map , "values");
+@each $property, $map in $utilities {
+  $prefix: map-get($map, "prefix");
+  $values: map-get($map, "values");
 
-  @each $k , $v in $values{
-    @if($k == "default") {
+  @each $k, $v in $values {
+    @if ($k == "default") {
       .#{$prefix} {
         #{$property}: $v;
       }
-    }
-    @else {
-      .#{$prefix}-#{$k}{
+    } @else {
+      .#{$prefix}-#{$k} {
         #{$property}: $v;
       }
     }
