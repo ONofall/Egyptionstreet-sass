@@ -3,7 +3,8 @@
   cursor: pointer;
   display: inline-block;
   border: 0;
-  padding: $base-padding $base-padding * 2;
+  padding-top: $base-padding;
+  padding-bottom: $base-padding;
   border-radius: $base-border-radius;
   background-color: $bg-color;
 

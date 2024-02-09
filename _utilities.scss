@@ -186,7 +186,18 @@ $utilities: (
                         "75": $base-height * 3,
                         "100": $base-height * 4
                 ),
+        ),
+        "border":(
+                "prefix" :"h",
+                "values":(
+                        "0": $base-height * 0 ,
+                        "25": $base-height ,
+                        "50": $base-height * 2,
+                        "75": $base-height * 3,
+                        "100": $base-height * 4
+                ),
         )
+
 );
 //generate utility classes
 @each $property, $map in $utilities {
